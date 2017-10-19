@@ -8,4 +8,14 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Model\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Model\EmptyClass.cs" />
+    <Compile Remove="Model\index.cs" />
+  </ItemGroup>
 </Project>

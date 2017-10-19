@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="~/css/stylesheet.css">
 
 
     <!-- VIEWPORT -->
@@ -63,6 +63,8 @@
 <div class="container">
 
 @RenderBody()
+
+			<div></div>
 
 </div>
 
@@ -80,8 +82,9 @@
 
 
 
-<!-- FORM CHARACTER COUNTDOWN --> 
-<script src="~/js/ww-form-character-countdown.js"></script>
+
+
+@RenderSection("Scripts", required: false)
 
 </body>
 </html>

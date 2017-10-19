@@ -2,7 +2,7 @@ body {
     font-family: ;
     font-size: 14px;
     background: #f4f4f4;
-    color: ;
+    color: #333333;
 }
 
 
@@ -46,6 +46,9 @@ a {
     margin: 1em;
 }
 
+.form-title {
+    color: black;
+}
 
 .card {
     padding-bottom: 2em;
@@ -66,11 +69,18 @@ textarea:focus, input:focus {
 .card-img-overlay h4, h3, p{
         color: white;
     }
+
+p {
+    color: #333;
+}
+
+.form-control[aria-invalid="true"]{
+    border: 2px solid #a9252a;
+}
+
 .preview-font {
     font-family: 'Creepster', cursive;
 }
-
-
 
 .text-right-margin {
     margin-right: 0.5em;
@@ -81,47 +91,10 @@ textarea:focus, input:focus {
     outline: none;
 }
 
-/*
-.row {
-    display: table;
-}
-
-[class*="col-"] {
-    float: none;
-    display: table-cell;
-    vertical-align: top;
-} */
-
 .input-clear {
     background: rgba(255, 255, 255, 0.5);
 }
 
-/*
-.row{
-    overflow: hidden; 
-}
-
-[class*="col-"]{
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-}
-*/
-
-/*
-.card img {
-    max-height: 100%;
-    max-width: 100%;
-    
-}
-.row {
-    border: 1px solid #999;
-}
-
-.row .no-float {
-  display: table-cell;
-  float: none;
-}
-*/
 
 /* 
     ************************************************************************
