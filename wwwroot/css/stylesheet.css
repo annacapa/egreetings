@@ -1,0 +1,149 @@
+body {
+    font-family: ;
+    font-size: 14px;
+    background: #f4f4f4;
+    color: ;
+}
+
+
+
+html,
+body,
+.view {
+    height: 100%;
+}
+
+.view {
+    /* background: url("../images/thomas-shellberg-31280.jpg")no-repeat center center fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a {
+    color: ;
+}
+
+    a:link, 
+    a:visited,
+    a:active, 
+    a:hover
+    a:focus {
+        color: ;
+    }
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-title, .card-text, .card .form-group {
+    margin: 1em;
+}
+
+
+.card {
+    padding-bottom: 2em;
+    background: white;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    border-color: transparent;
+}
+
+.card-img-overlay {
+        width:100%;
+        top: .3rem;
+        position: absolute;
+    }
+
+.card-img-overlay h4, h3, p{
+        color: white;
+    }
+.preview-font {
+    font-family: 'Creepster', cursive;
+}
+
+
+
+.text-right-margin {
+    margin-right: 0.5em;
+}
+
+
+*:focus {
+    outline: none;
+}
+
+/*
+.row {
+    display: table;
+}
+
+[class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+} */
+
+.input-clear {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/*
+.row{
+    overflow: hidden; 
+}
+
+[class*="col-"]{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+*/
+
+/*
+.card img {
+    max-height: 100%;
+    max-width: 100%;
+    
+}
+.row {
+    border: 1px solid #999;
+}
+
+.row .no-float {
+  display: table-cell;
+  float: none;
+}
+*/
+
+/* 
+    ************************************************************************
+    HOW TO: ADJUST YOUR CSS WHEN THE USER'S VIEWPORT GETS LARGER
+    You may combine anything to the right of "@media screen"    
+    For example: 
+    @media screen and (min-width: 1024px) and (orientation: landscape)
+    ************************************************************************
+*/
+
+/* FOR LARGER HEIGHT */
+@media screen and (min-height: ___px) {
+}
+
+/* FOR LARGER WIDTH */
+@media screen and (min-width: ___px) {
+}
+
+/* FOR PORTRAIT ONLY */
+@media screen and (orientation: portrait) {
+}
+
+/* FOR LANDSCAPE ONLY */
+@media screen and (orientation: landscape) {
+}
