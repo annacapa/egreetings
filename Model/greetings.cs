@@ -26,7 +26,7 @@ namespace halloween.Model
 
         [DisplayName("First Name Label")]
         [Required(ErrorMessage = "Required")]
-        public string labeltoFirstName { get; set; }
+        public string LabeltoFirstName { get; set; }
 
         [DisplayName("First Name")]
         [Required(ErrorMessage = "Required")]
