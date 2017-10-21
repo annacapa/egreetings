@@ -13,13 +13,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Model\Index.cshtml" />
+    <None Remove="Pages\Preview.html" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Model\EmptyClass.cs" />
     <Compile Remove="Model\index.cs" />
-    <Compile Remove="Model\Index.cshtml.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Remove="Model\Index.cshtml" />
+    <Content Remove="Pages\Preview.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\Preview.cshtml.cs">
+      <DependentUpon>Preview.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

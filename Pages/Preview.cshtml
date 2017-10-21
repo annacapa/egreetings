@@ -1,0 +1,94 @@
+﻿@page
+@model PreviewModel
+
+    <!--  Row  -->
+    <div class="row">
+    <!--  Column Width  -->
+    <div class="col-xs-12 col-sm-8 col-md-6">
+            
+        <!--Card-->
+        <div class="card">
+            <!--Card image-->
+            <div >
+                <img src="images/thomas-shellberg-31280.jpg" class="img-fluid" alt="">
+            </div>
+            <!--/.Card image-->
+            <!--Card content-->
+            <div class="card-body">
+
+                <!--Title-->
+                <h4 class="card-title">Haunted House!</h4>
+                
+
+                <form>
+                    <div >
+                        <label asp-for="bridgegreetings.title"></label>
+                        <textarea asp-for="bridgegreetings.message" class="form-control" maxlength="100" placeholder="Say something scary..."></textarea>
+                        <span class="countdown"></span>
+                    </div>
+                </form>
+
+            </div>
+            <!--/Card content-->
+        </div>
+        <!--/Card-->
+
+    </div>
+    <!--  /Column Width  -->
+
+        <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-1">
+            
+            <div class="form-header">
+                <h4>Now for the easy part.</h4>
+                <p>Address your card by filling out this form:</p>
+            </div>
+                
+                <form>
+                    <div class="form-group">
+                        <label asp-for="bridgegreetings.sendTo">Send To:</label>
+                        <!-- <label asp-for="bridgegreetings.LabeltoFirstName" class="sr-only">First Name Label</label> -->
+                        <input type="text" asp-for="bridgegreetings.toFirstName" class="form-control input-clear"  placeholder="First Name" maxlength="30">
+                    </div>
+                    <div class="form-group">
+                        <!-- <label asp-for="bridgegreetings.labeltoLastName" class="sr-only">Last Name</label> -->
+                        <input type="text" asp-for="bridgegreetings.toLastName" class="form-control input-clear"  placeholder="Last Name" maxlength="30">
+                    </div>
+                    <div class="form-group">
+                        <!-- <label asp-for="bridgegreetings.labeltoEmail" class="sr-only">Email</label> -->
+                        <input type="text" asp-for="bridgegreetings.toEmail" class="form-control input-clear" placeholder="Email" maxlength="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="bridgegreetings.sentFrom">Sent From:</label>
+                        <input type="text" asp-for="bridgegreetings.fromFirstName" class="form-control input-clear"  placeholder="First Name" maxlength="30">
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="formGroupExampleInput4"></label> -->
+                        <input type="text" asp-for="bridgegreetings.fromLastName" class="form-control input-clear"  placeholder="Last Name" maxlength="30">
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="formGroupExampleInput5"></label> -->
+                        <input type="text" asp-for="bridgegreetings.fromEmail" class="form-control input-clear" placeholder="Email" maxlength="100">
+                    </div>
+
+                    <div class="checkbox">
+                        <label><input type="checkbox" asp-for="bridgegreetings.agree" value="">I agree to the terms and conditions.</label>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Next</button>
+                </form>
+
+        </div>
+        <!--/Right Half-->
+            
+
+    </div>
+    <!--  /Row  -->
+
+
+    @section Scripts{
+    <!-- FORM CHARACTER COUNTDOWN --> 
+    <script src="~/js/ww-form-character-countdown.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
