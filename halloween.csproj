@@ -17,5 +17,9 @@
   <ItemGroup>
     <Compile Remove="Model\EmptyClass.cs" />
     <Compile Remove="Model\index.cs" />
+    <Compile Remove="Model\Index.cshtml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Model\Index.cshtml" />
   </ItemGroup>
 </Project>

@@ -14,115 +14,59 @@ namespace halloween.Model
     {
         [DisplayName("Write a Message")]
         [Required(ErrorMessage = "Required")]
-        public string title
-        {
-            get;
-            set;
-        }
+        public string title { get; set; }
 
         [DisplayName("Your Message")]
         [Required(ErrorMessage = "Required")]
-        public string message
-        {
-            get;
-            set;
-        }
+        public string message { get; set; }
 
         [DisplayName("Send To")]
         [Required(ErrorMessage = "Required")]
-        public string sendTo
-        {
-            get;
-            set;
-        }
+        public string sendTo { get; set; }
 
         [DisplayName("First Name Label")]
         [Required(ErrorMessage = "Required")]
-        public string labeltoFirstName
-        {
-            get;
-            set;
-        }
+        public string labeltoFirstName { get; set; }
 
         [DisplayName("First Name")]
         [Required(ErrorMessage = "Required")]
-        public string toFirstName
-        {
-            get;
-            set;
-        }
+        public string toFirstName { get; set; }
 
         [DisplayName("Last Name Label")]
         [Required(ErrorMessage = "Required")]
-        public string labeltoLastName
-        {
-            get;
-            set;
-        }
+        public string labeltoLastName { get; set; }
 
         [DisplayName("Last Name")]
         [Required(ErrorMessage = "Required")]
-        public string toLastName
-        {
-            get;
-            set;
-        }
+        public string toLastName { get; set; }
 
         [DisplayName("Email Label")]
         [Required(ErrorMessage = "Required")]
-        public string labeltoEmail
-        {
-            get;
-            set;
-        }
+        public string labeltoEmail { get; set; }
 
         [DisplayName("Email")]
         [Required(ErrorMessage = "Required")]
-        public string toEmail
-        {
-            get;
-            set;
-        }
+        public string toEmail { get; set; }
 
         [DisplayName("Sent From")]
         [Required(ErrorMessage = "Required")]
-        public string sentFrom
-        {
-            get;
-            set;
-        }
+        public string sentFrom { get; set; }
 
         [DisplayName("First Name")]
         [Required(ErrorMessage = "Required")]
-        public string fromFirstName
-        {
-            get;
-            set;
-        }
+        public string fromFirstName { get; set; }
 
         [DisplayName("Last Name")]
         [Required(ErrorMessage = "Required")]
-        public string fromLastName
-        {
-            get;
-            set;
-        }
+        public string fromLastName { get; set; }
 
         [DisplayName("Email")]
         [Required(ErrorMessage = "Required")]
-        public string fromEmail
-        {
-            get;
-            set;
-        }
+        public string fromEmail { get; set; }
 
         [DisplayName("Terms and Conditions")]
         [Required(ErrorMessage = "Required")]
-        public string agree
-        {
-            get;
-            set;
-        }
+        public string agree { get; set; }
 
     }
 }
