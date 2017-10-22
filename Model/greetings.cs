@@ -11,44 +11,37 @@ namespace halloween.Model
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     public class greetings
-    {
-        [DisplayName("Write a Message")]
+
+    { 
+        
+        [DisplayName("Scary card title goes here")]
         [Required(ErrorMessage = "Required")]
         public string title { get; set; }
 
-        [DisplayName("Your Message")]
+        [DisplayName("Say something scary here...boo!")]
         [Required(ErrorMessage = "Required")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Enter between 3 and 100 characters.")]
         public string message { get; set; }
 
-        [DisplayName("Send To")]
+        [DisplayName("Send To Testing 1 2 3")]
         [Required(ErrorMessage = "Required")]
         public string sendTo { get; set; }
 
-        [DisplayName("First Name Label")]
-        [Required(ErrorMessage = "Required")]
-        public string LabeltoFirstName { get; set; }
-
         [DisplayName("First Name")]
+        [Display(Prompt = "Enter First Name")]
         [Required(ErrorMessage = "Required")]
         public string toFirstName { get; set; }
 
-        [DisplayName("Last Name Label")]
-        [Required(ErrorMessage = "Required")]
-        public string labeltoLastName { get; set; }
-
         [DisplayName("Last Name")]
+        [Display(Prompt = "Enter Last Name")]
         [Required(ErrorMessage = "Required")]
         public string toLastName { get; set; }
-
-        [DisplayName("Email Label")]
-        [Required(ErrorMessage = "Required")]
-        public string labeltoEmail { get; set; }
 
         [DisplayName("Email")]
         [Required(ErrorMessage = "Required")]
         public string toEmail { get; set; }
 
-        [DisplayName("Sent From")]
+        [DisplayName("Sent From Test")]
         [Required(ErrorMessage = "Required")]
         public string sentFrom { get; set; }
 

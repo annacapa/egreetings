@@ -1,5 +1,4 @@
-﻿@page
-@model IndexModel
+﻿@model IndexModel
 
 
     <!--  Row  -->
@@ -23,8 +22,13 @@
 
                 <form>
                     <div class="form-group">
+                        
                         <label asp-for="bridgegreetings.title"></label>
+                        <textarea asp-for="bridgegreetings.title" class="form-control"></textarea>
+                        <div asp-validation-for="bridgegreetings.title" class="text-danger"></div>
+                        
                         <textarea asp-for="bridgegreetings.message" class="form-control" maxlength="100" placeholder="Say something scary..."></textarea>
+                        <div asp-validation-for="bridgegreetings.message" class="text-danger"></div>
                         <span class="countdown"></span>
                     </div>
                 </form>
@@ -46,29 +50,37 @@
                 
                 <form>
                     <div class="form-group">
-                        <label asp-for="bridgegreetings.sendTo">Send To:</label>
-                        <input type="text" asp-for="bridgegreetings.toFirstName" class="form-control input-clear"  placeholder="First Name" maxlength="30">
+                        <label asp-for="bridgegreetings.sendTo"></label>
+                
+                        <label asp-for="bridgegreetings.toFirstName" class="sr-only"></label>
+                        <input type="text" asp-for="bridgegreetings.toFirstName" class="form-control" maxlength="30">
+                        <!-- <div asp-validation-for="bridgegreetings.toFirstName" class="text-danger"></div> -->
                     </div>
                     <div class="form-group">
-                        <!-- <label for="formGroupExampleInput1"></label> -->
-                        <input type="text" asp-for="bridgegreetings.toLastName" class="form-control input-clear"  placeholder="Last Name" maxlength="30">
+                        <label asp-for="bridgegreetings.toLastName" class="sr-only"></label>
+                        <input type="text" asp-for="bridgegreetings.toLastName" class="form-control" maxlength="30">
+                        <div asp-validation-for="bridgegreetings.toLastName" class="text-danger"></div>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="formGroupExampleInput2"></label> -->
-                        <input type="text" asp-for="bridgegreetings.toEmail" class="form-control input-clear" placeholder="Email" maxlength="100">
+                        <label asp-for="bridgegreetings.toEmail" class="sr-only">Email</label>
+                        <input type="text" asp-for="bridgegreetings.toEmail" class="form-control" placeholder="Email" maxlength="100">
+                        <div asp-validation-for="bridgegreetings.toEmail" class="text-danger"></div>
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="bridgegreetings.sentFrom">Sent From:</label>
-                        <input type="text" asp-for="bridgegreetings.fromFirstName" class="form-control input-clear"  placeholder="First Name" maxlength="30">
+                        <label asp-for="bridgegreetings.sentFrom"></label>
+                        <input type="text" asp-for="bridgegreetings.fromFirstName" class="form-control"  placeholder="First Name" maxlength="30">
+                        <div asp-validation-for="bridgegreetings.fromFirstName" class="text-danger"></div>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="formGroupExampleInput4"></label> -->
+                        <label asp-for="bridgegreetings.fromLastName" class="sr-only">Last Name</label>
                         <input type="text" asp-for="bridgegreetings.fromLastName" class="form-control input-clear"  placeholder="Last Name" maxlength="30">
+                        <div asp-validation-for="bridgegreetings.fromLastName" class="text-danger"></div>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="formGroupExampleInput5"></label> -->
+                        <label asp-for="bridgegreetings.fromEmail" class="sr-only">Email</label>
                         <input type="text" asp-for="bridgegreetings.fromEmail" class="form-control input-clear" placeholder="Email" maxlength="100">
+                        <div asp-validation-for="bridgegreetings.fromEmail" class="text-danger"></div>
                     </div>
 
                     <div class="checkbox">
