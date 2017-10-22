@@ -27,7 +27,7 @@
                         <textarea asp-for="bridgegreetings.title" class="form-control"></textarea>
                         <div asp-validation-for="bridgegreetings.title" class="text-danger"></div>
                         
-                        <textarea asp-for="bridgegreetings.message" class="form-control" maxlength="100" placeholder="Say something scary..."></textarea>
+                        <textarea asp-for="bridgegreetings.message" class="form-control" maxlength="100"></textarea>
                         <div asp-validation-for="bridgegreetings.message" class="text-danger"></div>
                         <span class="countdown"></span>
                     </div>
@@ -54,7 +54,7 @@
                 
                         <label asp-for="bridgegreetings.toFirstName" class="sr-only"></label>
                         <input type="text" asp-for="bridgegreetings.toFirstName" class="form-control" maxlength="30">
-                        <!-- <div asp-validation-for="bridgegreetings.toFirstName" class="text-danger"></div> -->
+                        <div asp-validation-for="bridgegreetings.toFirstName" class="text-danger"></div> 
                     </div>
                     <div class="form-group">
                         <label asp-for="bridgegreetings.toLastName" class="sr-only"></label>
@@ -74,7 +74,7 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="bridgegreetings.fromLastName" class="sr-only">Last Name</label>
-                        <input type="text" asp-for="bridgegreetings.fromLastName" class="form-control input-clear"  placeholder="Last Name" maxlength="30">
+                        <input type="text" asp-for="bridgegreetings.fromLastName" class="form-control input-clear" placeholder="Last Name" maxlength="30">
                         <div asp-validation-for="bridgegreetings.fromLastName" class="text-danger"></div>
                     </div>
                     <div class="form-group">
@@ -85,6 +85,7 @@
 
                     <div class="checkbox">
                         <label><input type="checkbox" asp-for="bridgegreetings.agree" value="">I agree to the terms and conditions.</label>
+				        <div asp-validation-for="bridgegreetings.agree" class="text-danger"></div>
                     </div>
 
                     <button class="btn btn-primary" type="submit">Next</button>
