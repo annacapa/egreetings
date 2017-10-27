@@ -24,10 +24,12 @@
                     <div class="form-group">
                         
                         <label asp-for="bridgegreetings.title"></label>
-                        <textarea asp-for="bridgegreetings.title" class="form-control"></textarea>
+						@Model.bridgegreetings.title
+                        <!--/ <textarea asp-for="bridgegreetings.title" class="form-control"></textarea>-->
                         <div asp-validation-for="bridgegreetings.title" class="text-danger"></div>
-                        
-                        <textarea asp-for="bridgegreetings.message" class="form-control" maxlength="100"></textarea>
+
+						@Model.bridgegreetings.message
+                        <!--/ <textarea asp-for="bridgegreetings.message" class="form-control" maxlength="100"></textarea>-->
                         <span asp-validation-for="bridgegreetings.message" class="text-danger"></span>
                         <span class="countdown"></span>
                     </div>
@@ -53,42 +55,33 @@
                         <label asp-for="bridgegreetings.sendTo"></label>
                 
                         <label asp-for="bridgegreetings.toFirstName" class="sr-only"></label>
-                        <input type="text" asp-for="bridgegreetings.toFirstName" class="form-control" maxlength="30">
-                        <div asp-validation-for="bridgegreetings.toFirstName" class="text-danger"></div> 
+				        @Model.bridgegreetings.toFirstName
                     </div>
+			
                     <div class="form-group">
                         <label asp-for="bridgegreetings.toLastName" class="sr-only"></label>
-                        <input type="text" asp-for="bridgegreetings.toLastName" class="form-control" maxlength="30">
-                        <span asp-validation-for="bridgegreetings.toLastName" class="text-danger"></span>
+				        @Model.bridgegreetings.toLastName
                     </div>
+			
                     <div class="form-group">
                         <label asp-for="bridgegreetings.toEmail" class="sr-only">Email</label>
-                        <input type="email" asp-for="bridgegreetings.toEmail" class="form-control" placeholder="Email" maxlength="100">
-                        <span asp-validation-for="bridgegreetings.toEmail" class="text-danger"></span>
+				        @Model.bridgegreetings.toEmail
                     </div>
 
                     <div class="form-group">
                         <label asp-for="bridgegreetings.sentFrom"></label>
-                        <input type="text" asp-for="bridgegreetings.fromFirstName" class="form-control"  placeholder="First Name" maxlength="30">
-                        <span asp-validation-for="bridgegreetings.fromFirstName" class="text-danger"></span>
+				        @Model.bridgegreetings.fromFirstName
                     </div>
                     <div class="form-group">
                         <label asp-for="bridgegreetings.fromLastName" class="sr-only">Last Name</label>
-                        <input type="text" asp-for="bridgegreetings.fromLastName" class="form-control input-clear" placeholder="Last Name" maxlength="30">
-                        <span asp-validation-for="bridgegreetings.fromLastName" class="text-danger"></span>
+				        @Model.bridgegreetings.fromLastName
                     </div>
                     <div class="form-group">
                         <label asp-for="bridgegreetings.fromEmail" class="sr-only">Email</label>
-                        <input type="email" asp-for="bridgegreetings.fromEmail" class="form-control input-clear" placeholder="Email" maxlength="100">
-                        <span asp-validation-for="bridgegreetings.fromEmail" class="text-danger"></span>
+				        @Model.bridgegreetings.fromLastName
                     </div>
 
-                    <div class="checkbox">
-                        <label><input type="checkbox" asp-for="bridgegreetings.agree" value="">I agree to the terms and conditions.</label>
-				        <span asp-validation-for="bridgegreetings.agree" class="text-danger"></span>
-                    </div>
-
-                    <button class="btn btn-primary" type="submit">Next</button>
+                    <button class="btn btn-primary" type="submit">Send Your Card!</button>
                 </form>
 
         </div>

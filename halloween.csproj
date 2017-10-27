@@ -23,6 +23,9 @@
     <Content Remove="Pages\Preview.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Pages\_Preview.cshtml.cs">
+      <DependentUpon>_Preview.cshtml</DependentUpon>
+    </Compile>
     <Compile Update="Pages\Preview.cshtml.cs">
       <DependentUpon>Preview.cshtml</DependentUpon>
     </Compile>

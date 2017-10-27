@@ -14,17 +14,18 @@ namespace halloween.Model
 
     { 
         
-        [DisplayName("Enter scary card title")]
+        [DisplayName("Scary card title")]
+        [Display(Prompt = "Enter scary title")]
         [Required(ErrorMessage = "Required")]
         public string title { get; set; }
 
-        [DisplayName("Say something scary...boo!")]
-        [Display(Prompt = "Say something scary!!!")]
+        [DisplayName("Scary Message")]
+        [Display(Prompt = "Write your scary message")]
         [Required(ErrorMessage = "Required")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "Enter between 3 and 100 characters.")]
         public string message { get; set; }
 
-        [DisplayName("Send To Testing 1 2 3")]
+        [DisplayName("Send To")]
         [Required(ErrorMessage = "Required")]
         public string sendTo { get; set; }
 
