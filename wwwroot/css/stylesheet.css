@@ -1,23 +1,31 @@
 body {
-    font-family: ;
+    font-family:;
     font-size: 14px;
     background: #f4f4f4;
-    color: #333333;
+    color: #eeeeee;
+    font-family: 'Lato', sans-serif;
 }
 
+
+
 html,
-body,
-.view {
+body {
     height: 100%;
 }
 
-.view {
-    /* background: url("../images/thomas-shellberg-31280.jpg")no-repeat center center fixed; */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.row {
+    height: 100%;
 }
+
+.user {
+    padding: 1em;
+    height: 100%;
+}
+.onehundred {
+    height: 100%;
+}
+
+/*------------------ TEXT ------------------*/
 
 a {
     color: ;
@@ -29,55 +37,10 @@ a {
     a:hover
     a:focus {
         color: ;
-    }
-
-.card img {
-    max-width: 100%;
-    height: auto;
 }
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card-title, .card-text, .card .form-group {
-    margin: 1em;
-}
-
-.form-title {
-    color: black;
-}
-
-.card {
-    padding-bottom: 2em;
-    background: white;
-}
-
-textarea:focus, input:focus {
-    outline: none;
-    border-color: transparent;
-}
-
-.card-img-overlay {
-        width:100%;
-        top: .3rem;
-        position: absolute;
-    }
-
-.card-img-overlay h4, h3, p{
-        color: white;
-    }
-
-p {
-    color: #333;
-}
-
-.form-control[aria-invalid="true"]{
-    border: 2px solid #a9252a;
-}
-
-.preview-font {
-    font-family: 'Creepster', cursive;
+.preview-font, label {
+    font-family: 'Griffy', cursive;
 }
 
 .text-right-margin {
@@ -85,13 +48,96 @@ p {
 }
 
 
+/*------------------ BKGD IMAGE ------------------*/
+
+.bkgd-img {
+    background: url('../images/thomas-shellberg-31280.jpg') no-repeat center center fixed;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -100;
+}
+
+
+.transparent {
+    background: rgba(255,255,255,0.25);
+}
+
+/*------------------ FORM ------------------*/
+
+form {
+    padding: 1em;
+}
+
+form-control {
+    border: 0;
+}
+
 *:focus {
     outline: none;
 }
 
 .input-clear {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.6);
+    border: 0;
+    color: #444;
 }
+
+.form-control[aria-invalid="true"] {
+    border: 2px solid #a9252a;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    border-color: transparent;
+}
+
+.form-group {
+    margin: 1em;
+}
+
+.btn-basic {
+    background-color: #222;
+}
+
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #444;
+}
+
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #444;
+    opacity: 1;
+}
+
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #444;
+    opacity: 1;
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #444;
+}
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #444;
+}
+
+/*------------------ FORM MOVE RIGHT ------------------*/
+
+.sub-entry {
+    width: 50%;
+    float: left;
+}
+
+.button {
+    text-align: center;
+    padding-top: 20px;
+    clear: both;
+}
+
+
 
 
 /* 

@@ -14,12 +14,12 @@ namespace halloween.Model
 
     { 
         
-        [DisplayName("Scary card title")]
+        [DisplayName("Title Test")]
         [Display(Prompt = "Enter scary title")]
         [Required(ErrorMessage = "Required")]
         public string title { get; set; }
 
-        [DisplayName("Scary Message")]
+        [DisplayName("Message")]
         [Display(Prompt = "Write your scary message")]
         [Required(ErrorMessage = "Required")]
         [StringLength(100, MinimumLength = 3, ErrorMessage = "Enter between 3 and 100 characters.")]
@@ -30,12 +30,12 @@ namespace halloween.Model
         public string sendTo { get; set; }
 
         [DisplayName("First Name")]
-        [Display(Prompt = "Enter First Name")]
+        [Display(Prompt = "First Name")]
         [Required(ErrorMessage = "Required")]
         public string toFirstName { get; set; }
 
         [DisplayName("Last Name")]
-        [Display(Prompt = "Enter Last Name")]
+        [Display(Prompt = "Last Name")]
         [Required(ErrorMessage = "Required")]
         public string toLastName { get; set; }
 
@@ -43,7 +43,7 @@ namespace halloween.Model
         [Required(ErrorMessage = "Required")]
         public string toEmail { get; set; }
 
-        [DisplayName("Sent From Test")]
+        [DisplayName("Sent From")]
         [Required(ErrorMessage = "Required")]
         public string sentFrom { get; set; }
 

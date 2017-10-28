@@ -1,61 +1,31 @@
 ﻿@model IndexModel
 
 
-    <!--  Row  -->
-    <div class="row">
-    <!--  Column Width  -->
-    <div class="col-xs-12 col-sm-8 col-md-6">
             
-        <!--Card-->
-        <div class="card">
-            <!--Card image-->
-            <div >
-                <img src="images/thomas-shellberg-31280.jpg" class="img-fluid" alt="">
-            </div>
-            <!--/.Card image-->
-            <!--Card content-->
-            <div class="card-body">
+        
+            <div class="preview-font">
+               
+              	<div class="user col-xs-10 col-sm-5 col-md-6 col-lg-6 col-xs-offset-1 ">
 
-                <!--Title-->
-                <h4 class="card-title">Haunted House!</h4>
+                    <h1>@Model.bridgegreetings.title</h1>
+		            <span asp-validation-for="bridgegreetings.title" class="text-danger"></span>
+
+		            <h4>@Model.bridgegreetings.message </h4>
+		            <span asp-validation-for="bridgegreetings.message" class="text-danger"></span>
+
+	            </div>
                 
-
-                <form>
-                    <div class="form-group">
-                        
-                        <label asp-for="bridgegreetings.title"></label>
-						@Model.bridgegreetings.title
-                        <!--/ <textarea asp-for="bridgegreetings.title" class="form-control"></textarea>-->
-                        <div asp-validation-for="bridgegreetings.title" class="text-danger"></div>
-
-						@Model.bridgegreetings.message
-                        <!--/ <textarea asp-for="bridgegreetings.message" class="form-control" maxlength="100"></textarea>-->
-                        <span asp-validation-for="bridgegreetings.message" class="text-danger"></span>
-                        <span class="countdown"></span>
-                    </div>
-                </form>
-
-            </div>
-            <!--/Card content-->
-        </div>
-        <!--/Card-->
-
-    </div>
-    <!--  /Column Width  -->
-
-        <div class="col-xs-12 col-sm-4 col-md-4 col-md-offset-1">
             
-            <div class="form-header">
-                <h4>Now for the easy part.</h4>
-                <p>Address your card by filling out this form:</p>
-            </div>
-                
-                <form>
+                <div class="user rounded transparent col-xs-12 col-sm-5 col-md-4 col-lg-4 pull-right">
+
+                <form>                  
                     <div class="form-group">
                         <label asp-for="bridgegreetings.sendTo"></label>
-                
-                        <label asp-for="bridgegreetings.toFirstName" class="sr-only"></label>
-				        @Model.bridgegreetings.toFirstName
+                        <div>
+                            <label asp-for="bridgegreetings.toFirstName" class="sr-only"></label>
+                            @Model.bridgegreetings.toFirstName
+			            </div>
+
                     </div>
 			
                     <div class="form-group">
@@ -70,7 +40,9 @@
 
                     <div class="form-group">
                         <label asp-for="bridgegreetings.sentFrom"></label>
-				        @Model.bridgegreetings.fromFirstName
+			            <div>
+                        @Model.bridgegreetings.fromFirstName
+                        </div>
                     </div>
                     <div class="form-group">
                         <label asp-for="bridgegreetings.fromLastName" class="sr-only">Last Name</label>
@@ -78,15 +50,10 @@
                     </div>
                     <div class="form-group">
                         <label asp-for="bridgegreetings.fromEmail" class="sr-only">Email</label>
-				        @Model.bridgegreetings.fromLastName
+				        @Model.bridgegreetings.fromEmail
                     </div>
 
-                    <button class="btn btn-primary" type="submit">Send Your Card!</button>
+                    <button class="btn btn-basic btn-block" type="submit">Send Your Card!</button>
                 </form>
 
-        </div>
-        <!--/Right Half-->
-            
-
-    </div>
-    <!--  /Row  -->
+                </div>
