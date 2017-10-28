@@ -27,6 +27,10 @@ body {
 
 /*------------------ TEXT ------------------*/
 
+h1 {
+    font-size: 3.5em;
+}
+
 a {
     color: ;
 }
@@ -48,6 +52,8 @@ a {
 }
 
 
+
+
 /*------------------ BKGD IMAGE ------------------*/
 
 .bkgd-img {
@@ -63,6 +69,10 @@ a {
 
 .transparent {
     background: rgba(255,255,255,0.25);
+}
+
+.really-transparent {
+    background: rgba(255,255,255,0.10);
 }
 
 /*------------------ FORM ------------------*/
@@ -99,7 +109,7 @@ textarea:focus, input:focus {
 }
 
 .btn-basic {
-    background-color: #222;
+    background-color: #355b80;
 }
 
 input::-webkit-input-placeholder { /* WebKit, Blink, Edge */

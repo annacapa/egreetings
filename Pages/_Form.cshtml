@@ -1,7 +1,7 @@
 ﻿@model IndexModel
 
 
-            <div>
+            <div class="onehundred">
 
 	            <div class="user col-xs-10 col-sm-5 col-md-6 col-lg-6 col-xs-offset-1">
 
@@ -12,7 +12,7 @@
 
 
 
-	            <div class="user rounded transparent col-xs-12 col-sm-5 col-md-4 col-lg-4 pull-right">
+	            <div class="user rounded really-transparent col-xs-12 col-sm-5 col-md-4 col-lg-4 pull-right">
 
                 <form method="post">
                     <div class="form-group 444">
@@ -55,8 +55,9 @@
 
                     <div class="form-group">
                         <label asp-for="bridgegreetings.title"></label>
-                        <input type="text" asp-for="bridgegreetings.title" class="form-control input-clear" maxlength="30">
+                        <input type="text" asp-for="bridgegreetings.title" class="form-control input-clear" maxlength="60">
                         <span asp-validation-for="bridgegreetings.title" class="text-danger"></span>
+				        <span class="countdown"></span>
 				    </div>
                     <div class="form-group">     
                         <textarea asp-for="bridgegreetings.message" class="form-control input-clear" maxlength="150"></textarea>
@@ -64,10 +65,12 @@
                         <span class="countdown"></span>
                     </div>
 
+			        <div class="form-group">
                     <div class="checkbox">
                         <label><input type="checkbox" asp-for="bridgegreetings.agree" value="">I agree to the terms and conditions.</label>
 				        <span asp-validation-for="bridgegreetings.agree" class="text-danger"></span>
                     </div>
+				    </div>
                     <div class="form-group">
                     <button class="btn btn-basic btn-block" type="submit">  Next  </button>
 				    </div>
