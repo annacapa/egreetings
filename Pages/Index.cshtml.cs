@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using halloween.Model;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace halloween.Pages
 {
@@ -17,9 +19,36 @@ namespace halloween.Pages
         }
 
         // PREVIEW MODE (AFTER SUBMITTING)
-        public void OnPost()
+        public async Task<IActionResult> OnPost()
         {
             isPreviewPage = true;
+
+            if (await isValid())
+            {
+                if (ModelState.IsValid)
+                {
+                    try
+                    {
+                        // DB-RELATED: CUSTOMIZE VALUES TO BE ADDED TO THE DB
+                        bridgegreetings.createDate = DateTime.Now.ToString();
+                        bridgegreetings.createIP = this.HttpContext.Connection.RemoteIpAddress.ToString();
+
+                        //DB-RELATED: ADD NEW RECORD TO THE DATABASE
+                        _myDB.greetings.Add(bridgegreetings);
+                        _myDB.SaveChanges();
+
+                        // DB-RELATED: SEND USER TO THE PREVIEW PAGE SHOWING THE NEW RECORD
+                        return RedirectToPage("Preview", new { id = bridgegreetings.ID });
+                    }
+                    catch { }
+                }
+            }
+            else
+            {
+                ModelState.AddModelError("__MODEL__.Recaptcha", "");
+            }
+
+            return Page();
         }
 
         // BRIDGE TO GREETINGS MODEL
@@ -29,6 +58,46 @@ namespace halloween.Pages
 
         // TEST IF USER IS LOOKING AT PREVIEW OR FORM
         public bool isPreviewPage { get; set; }
+
+
+        // RE-CAPTCHA VALIDATION
+        private async Task<bool> isValid()
+        {
+            var response = this.HttpContext.Request.Form["g-recaptcha-response"];
+            if (string.IsNullOrEmpty(response))
+                return false;
+
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    var values = new Dictionary<string, string>();
+                    values.Add("secret", "6LeXTDYUAAAAAJ7Q3oE41YCIZfaCnVAQbwlzQ3gC");
+                    values.Add("response", response);
+                    //values.Add("remoteip", this.HttpContext.Connection.RemoteIpAddress.ToString());
+
+                    var query = new FormUrlEncodedContent(values);
+
+
+                    var post = client.PostAsync("https://www.google.com/recaptcha/api/siteverify", query);
+
+                    var json = await post.Result.Content.ReadAsStringAsync();
+
+                    if (json == null)
+                        return false;
+
+                    var results = JsonConvert.DeserializeObject<dynamic>(json);
+
+                    return results.success;
+                }
+
+            }
+            catch { }
+
+
+            return false;
+        }
+
 
 
     }

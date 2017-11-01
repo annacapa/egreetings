@@ -18,8 +18,8 @@ body {
 }
 
 .user {
-    padding: 1em;
-    height: 100%;
+    padding: 1em 1em 3em 5em;
+
 }
 .onehundred {
     height: 100%;
@@ -111,27 +111,34 @@ textarea:focus, input:focus {
 .btn-basic {
     background-color: #355b80;
 }
-
-input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+.form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: #444;
 }
 
-input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color: #444;
     opacity: 1;
 }
 
-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
     color: #444;
     opacity: 1;
 }
 
-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #444;
 }
 
-input::-ms-input-placeholder { /* Microsoft Edge */
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
     color: #444;
+}
+
+label {
+    font-size: 16px;
+}
+
+.top-margin {
+    margin-top: 1em;
 }
 
 /*------------------ FORM MOVE RIGHT ------------------*/

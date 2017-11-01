@@ -14,16 +14,6 @@ namespace halloween.Model
 
     { 
         
-        [DisplayName("Title Test")]
-        [Display(Prompt = "Enter scary title")]
-        [Required(ErrorMessage = "Required")]
-        public string title { get; set; }
-
-        [DisplayName("Message")]
-        [Display(Prompt = "Write your scary message")]
-        [Required(ErrorMessage = "Required")]
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "Enter between 3 and 100 characters.")]
-        public string message { get; set; }
 
         [DisplayName("Send To")]
         [Required(ErrorMessage = "Required")]
@@ -58,10 +48,24 @@ namespace halloween.Model
         [DisplayName("Email")]
         [Required(ErrorMessage = "Required")]
         public string fromEmail { get; set; }
+       
+        [DisplayName("Title and Message")]
+        [Display(Prompt = "Enter scary title")]
+        [Required(ErrorMessage = "Required")]
+        public string title { get; set; }
+
+        [DisplayName("Message")]
+        [Display(Prompt = "Write your scary message")]
+        [Required(ErrorMessage = "Required")]
+        [StringLength(150, MinimumLength = 3, ErrorMessage = "Enter between 3 and 150 characters.")]
+        public string message { get; set; }
 
         [DisplayName("Terms and Conditions")]
+        [StringLength(4, MinimumLength = 1, ErrorMessage = "You must agree to this website's Terms or Use and Privacy Policy.")]
         [Required(ErrorMessage = "Required")]
         public string agree { get; set; }
+
+        public string reCaptcha { get; set; }
 
     }
 }

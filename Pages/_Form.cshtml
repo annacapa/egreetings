@@ -1,18 +1,16 @@
 ﻿@model IndexModel
 
 
-            <div class="onehundred">
+        <div class="onehundred">
 
-	            <div class="user col-xs-10 col-sm-5 col-md-6 col-lg-6 col-xs-offset-1">
+            <div class="user col-xs-10 col-sm-5 col-md-6 col-lg-6">
 
-                    <h1 class="preview-font">Happy Halloween!</h1>
-                    <h4 class="preview-font">Scare your friends with this eGreeting:</h4>
+                <h1 class="preview-font">Happy Halloween!</h1>
+                <h4 class="preview-font">Scare your friends with this eGreeting:</h4>
 
-	            </div>
+            </div>
 
-
-
-	            <div class="user rounded really-transparent col-xs-12 col-sm-5 col-md-4 col-lg-4 pull-right">
+            <div class="onehundred rounded really-transparent col-xs-12 col-sm-5 col-md-4 col-lg-4 col-sm-offset-2">
 
                 <form method="post">
                     <div class="form-group 444">
@@ -67,16 +65,23 @@
 
 			        <div class="form-group">
                     <div class="checkbox">
-                        <label><input type="checkbox" asp-for="bridgegreetings.agree" value="">I agree to the terms and conditions.</label>
-				        <span asp-validation-for="bridgegreetings.agree" class="text-danger"></span>
+                        <label>
+						    <input type="checkbox" asp-for="bridgegreetings.agree" value="">I agree to the terms and conditions.
+					    </label>
+					    <span asp-validation-for="bridgegreetings.agree" class="text-danger"></span>
                     </div>
 				    </div>
                     <div class="form-group">
-                    <button class="btn btn-basic btn-block" type="submit">  Next  </button>
+				        <div class="g-recaptcha" data-sitekey="6LeXTDYUAAAAALqbMEDvxpjeDhsY3X_LqfygY5Ug"></div>
+				        <span asp-validation-for="bridgegreetings.reCaptcha" class="text-danger"></span>
+                        <button class="btn btn-basic btn-block top-margin" type="submit">  Next  </button>
 				    </div>
+
+			        
+			
                 </form>
 
-		        </div>
+            </div>
 
         </div>
 
