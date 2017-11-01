@@ -55,6 +55,13 @@ namespace halloween.Pages
         [BindProperty]
         public greetings bridgegreetings { get; set; }
 
+        // HEY, CONNECT MY DATABASE TO THIS MODEL
+        private DbBuilder _myDB;
+        public IndexModel(DbBuilder myDB)
+        {
+            _myDB = myDB;
+        }
+
 
         // TEST IF USER IS LOOKING AT PREVIEW OR FORM
         public bool isPreviewPage { get; set; }

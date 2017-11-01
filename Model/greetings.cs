@@ -13,7 +13,9 @@ namespace halloween.Model
     public class greetings
 
     { 
-        
+        // ADD A UNIQUE IDENTIFIER
+        [Key]
+        public int ID { get; set; }
 
         [DisplayName("Send To")]
         [Required(ErrorMessage = "Required")]
@@ -64,6 +66,12 @@ namespace halloween.Model
         [StringLength(4, MinimumLength = 1, ErrorMessage = "You must agree to this website's Terms or Use and Privacy Policy.")]
         [Required(ErrorMessage = "Required")]
         public string agree { get; set; }
+
+        public string createDate { get; set; }
+        public string createIP { get; set; }
+
+        public string sendDate { get; set; }
+        public string sendIP { get; set; }
 
         public string reCaptcha { get; set; }
 
