@@ -16,9 +16,9 @@ namespace halloween.Model
         public DbBuilder(DbContextOptions<DbBuilder> options) : base(options) { }
 
         //DB-RELATED: CREATE A DB FOREACH EXISTING MODEL(S0
-        //public DbSet<greetings> Friends { get; set; }
-        //public DbSet<greetings> Frenemies { get; set; }
-        //public DbSet<greetings> Enemies { get; set; }
+        //public DbSet<Friends> Friends { get; set; }
+        //public DbSet<Frenemies> Frenemies { get; set; }
+        //public DbSet<Enemies> Enemies { get; set; }
         public DbSet<greetings> greetings { get; set; }
     }
 }
