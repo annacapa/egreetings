@@ -3,21 +3,28 @@
 
                                  
                     <div class="form-group">
+                        <label asp-for="bridgegreetings.sendTo"></label>
                         <div>
+                            <label asp-for="bridgegreetings.toFirstName" class="sr-only"></label>
                             @Model.toFirstName
 			            </div>
 
                     </div>
 		
                     <div class="form-group">
+                        <label asp-for="bridgegreetings.toEmail" class="sr-only">Email</label>
 				        @Model.bridgegreetings.toEmail
                     </div>
 
                     <div class="form-group">
+                        <label asp-for="bridgegreetings.sentFrom"></label>
+			            <div>
                         @Model.bridgegreetings.fromFirstName
+                        </div>
                     </div>
 
                     <div class="form-group">
+                        <label asp-for="bridgegreetings.fromEmail" class="sr-only">Email</label>
 				        @Model.bridgegreetings.fromEmail
                     </div>
 

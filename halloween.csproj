@@ -18,6 +18,7 @@
   <ItemGroup>
     <Compile Remove="Model\EmptyClass.cs" />
     <Compile Remove="Model\index.cs" />
+    <Compile Remove="Pages\_PreMsg.cshtml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Pages\Preview.cshtml" />
@@ -32,14 +33,11 @@
     <Compile Update="Pages\Complete.cshtml.cs">
       <DependentUpon>Complete.cshtml</DependentUpon>
     </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\_Preview.cshtml %28copy%29.cs">
-      <DependentUpon>_PreviewMessage.cshtml</DependentUpon>
-    </Compile>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\_PreviewMessage.cshtml.cs">
       <DependentUpon>_PrvwMsg.cshtml</DependentUpon>
     </Compile>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\_PreMsg.cshtml.cs">
-      <DependentUpon>_PreMsg.cshtml</DependentUpon>
+    <Compile Update="Pages\Card.cshtml.cs">
+      <DependentUpon>Card.cshtml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>
