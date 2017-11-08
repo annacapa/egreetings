@@ -1,38 +1,16 @@
-﻿@model IndexModel
+﻿@model halloween.Model.greetings
 
 
-            
-        
-        <div class="preview-font onehundred">
-               
-            <div class="user col-xs-10 col-sm-5 col-md-6 col-lg-6">
-
-                    <h1>@Model.bridgegreetings.title</h1>
-		            <span asp-validation-for="bridgegreetings.title" class="text-danger"></span>
-
-		            <h4>@Model.bridgegreetings.message </h4>
-		            <span asp-validation-for="bridgegreetings.message" class="text-danger"></span>
-
-            </div>
-                
-            
-            <div class="onehundred rounded really-transparent col-xs-12 col-sm-5 col-md-4 col-lg-4 col-sm-offset-2">
-
-                <form>                  
+                                 
                     <div class="form-group">
                         <label asp-for="bridgegreetings.sendTo"></label>
                         <div>
                             <label asp-for="bridgegreetings.toFirstName" class="sr-only"></label>
-                            @Model.bridgegreetings.toFirstName
+                            @Model.toFirstName
 			            </div>
 
                     </div>
-			
-                    <div class="form-group">
-                        <label asp-for="bridgegreetings.toLastName" class="sr-only"></label>
-				        @Model.bridgegreetings.toLastName
-                    </div>
-			
+		
                     <div class="form-group">
                         <label asp-for="bridgegreetings.toEmail" class="sr-only">Email</label>
 				        @Model.bridgegreetings.toEmail
@@ -44,17 +22,16 @@
                         @Model.bridgegreetings.fromFirstName
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label asp-for="bridgegreetings.fromLastName" class="sr-only">Last Name</label>
-				        @Model.bridgegreetings.fromLastName
-                    </div>
+
                     <div class="form-group">
                         <label asp-for="bridgegreetings.fromEmail" class="sr-only">Email</label>
 				        @Model.bridgegreetings.fromEmail
                     </div>
-                    <div class="form-group">
-                    <button class="btn btn-basic btn-block" type="submit">Send Your Card!</button>
-				    </div>
-                </form>
 
-            </div>
+                    <div class="form-group">
+				    <div class="has-error">@Model.Message</div>
+			
+
+			
+
+

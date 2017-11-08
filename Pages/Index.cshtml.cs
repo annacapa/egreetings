@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -15,13 +14,13 @@ namespace halloween.Pages
         // DEFAULT MODE
         public void OnGet()
         {
-            isPreviewPage = false;
+            
         }
 
         // PREVIEW MODE (AFTER SUBMITTING)
         public async Task<IActionResult> OnPost()
         {
-            isPreviewPage = true;
+            // isPreviewPage = true;
 
             if (await isValid())
             {
@@ -32,6 +31,11 @@ namespace halloween.Pages
                         // DB-RELATED: CUSTOMIZE VALUES TO BE ADDED TO THE DB
                         bridgegreetings.createDate = DateTime.Now.ToString();
                         bridgegreetings.createIP = this.HttpContext.Connection.RemoteIpAddress.ToString();
+                        bridgegreetings.fromEmail = bridgegreetings.fromEmail.ToLower();
+                        bridgegreetings.toEmail = bridgegreetings.toEmail.ToLower();
+                        bridgegreetings.agree = "true";
+                        bridgegreetings.message = bridgegreetings.fromFirstName.ToLower();
+                        bridgegreetings.message = bridgegreetings.fromLastName.Replace("fuck", "luck");
 
                         //DB-RELATED: ADD NEW RECORD TO THE DATABASE
                         _myDB.greetings.Add(bridgegreetings);
@@ -45,7 +49,7 @@ namespace halloween.Pages
             }
             else
             {
-                ModelState.AddModelError("__MODEL__.Recaptcha", "");
+                ModelState.AddModelError("bridgegreetings.reCaptcha", "Bawaaahaha!");
             }
 
             return Page();

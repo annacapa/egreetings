@@ -12,17 +12,18 @@ namespace halloween.Model
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     public class greetings
 
-    { 
+    {
+
         // ADD A UNIQUE IDENTIFIER
         [Key]
-        public int ID { get; set; }
+        public int? ID { get; set; }
 
         [DisplayName("Send To")]
         [Required(ErrorMessage = "Required")]
         public string sendTo { get; set; }
 
         [DisplayName("First Name")]
-        [Display(Prompt = "First Name")]
+        [Display(Prompt = "Name")]
         [Required(ErrorMessage = "Required")]
         public string toFirstName { get; set; }
 
@@ -39,7 +40,8 @@ namespace halloween.Model
         [Required(ErrorMessage = "Required")]
         public string sentFrom { get; set; }
 
-        [DisplayName("First Name")]
+        [DisplayName("F Name")]
+        [Display(Prompt = "Name")]
         [Required(ErrorMessage = "Required")]
         public string fromFirstName { get; set; }
 

@@ -1,11 +1,24 @@
 ﻿@page
-@model halloween.Pages.PreviewModel
-@{
-    ViewData["Title"] = "Preview";
-}
+@model PreviewModel
 
-<h2>Preview</h2>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+            <div class="user col-xs-10 col-sm-5 col-md-6 col-lg-6">
+
+	            @Html.Partial("_PreMsg", Model.bridgegreetings)
+
+            </div>
+
+            <div class="onehundred rounded really-transparent col-xs-12 col-sm-5 col-md-4 col-lg-4 col-sm-offset-2">
+
+        
+                @Html.Partial("_Preview", Model.bridgegreetings)
+
+
+	            <form method="post"> 
+                    <input type="hidden" asp-for="bridgegreetings.ID" />
+                    <input type="submit" value="Send Your Card!" class="btn btn-basic btn-block" />
+                </form>
+    
+            </div>
+
+

@@ -157,6 +157,48 @@ label {
 
 
 
+/*  FROM CAMILLE'S GIT FILES --> ENTRY **********************************/
+.panel {
+    border-radius: unset;
+    background: #fff;
+    border: unset;
+    border-top: 5px solid #666;
+    border-bottom: 5px solid #666;
+}
+
+.panel-header {
+    text-align: center;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.panel-footer {
+    background: #eee;
+    border: unset;
+    border-radius: unset;
+    padding-bottom: 1.5em;
+}
+
+.form .control-label {
+    display: none;
+}
+
+.form .countdown {
+    float: right;
+    color: #cc0000;
+    font-size: .8em;
+}
+
+.form .text-danger {
+    color: #cc0000;
+    font-size: .8em;
+    text-transform: uppercase;
+}
+
+
+
 /* 
     ************************************************************************
     HOW TO: ADJUST YOUR CSS WHEN THE USER'S VIEWPORT GETS LARGER

@@ -29,5 +29,17 @@
     <Compile Update="Pages\Preview.cshtml.cs">
       <DependentUpon>Preview.cshtml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\Complete.cshtml.cs">
+      <DependentUpon>Complete.cshtml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\_Preview.cshtml %28copy%29.cs">
+      <DependentUpon>_PreviewMessage.cshtml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\_PreviewMessage.cshtml.cs">
+      <DependentUpon>_PrvwMsg.cshtml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\_PreMsg.cshtml.cs">
+      <DependentUpon>_PreMsg.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
