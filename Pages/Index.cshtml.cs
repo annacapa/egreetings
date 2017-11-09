@@ -13,8 +13,7 @@ namespace halloween.Pages
     {
         // DEFAULT MODE
         public void OnGet()
-        {
-            
+        {          
         }
 
         // PREVIEW MODE (AFTER SUBMITTING)
@@ -34,8 +33,8 @@ namespace halloween.Pages
                         bridgegreetings.fromEmail = bridgegreetings.fromEmail.ToLower();
                         bridgegreetings.toEmail = bridgegreetings.toEmail.ToLower();
                         bridgegreetings.agree = "true";
-                        bridgegreetings.message = bridgegreetings.fromFirstName.ToLower();
-                        bridgegreetings.message = bridgegreetings.fromLastName.Replace("fuck", "luck");
+                        bridgegreetings.message = bridgegreetings.message.ToLower();
+                        bridgegreetings.message = bridgegreetings.message.Replace("fuck", "luck");
 
                         //DB-RELATED: ADD NEW RECORD TO THE DATABASE
                         _myDB.greetings.Add(bridgegreetings);

@@ -1,7 +1,7 @@
 ﻿@model halloween.Model.greetings
 <!--  @Model = MODEL plus the database  --> 
 
-
+<input type="hidden" asp-for="@Model.ID" />
 
                     <div class="form-group 444">
                         <label asp-for="@Model.sendTo"></label>
@@ -18,6 +18,19 @@
                     </div>
 
                     <div class="form-group">
+                        <label asp-for="@Model.title" class="control-label"></label>
+                        <input type="text" asp-for="@Model.title" class="form-control input-clear" maxlength="60">
+                        <span asp-validation-for="@Model.title" class="text-danger"></span>
+                        <span class="countdown"></span>
+                    </div>
+
+                    <div class="form-group">     
+                        <textarea asp-for="@Model.message" class="form-control input-clear" maxlength="150"></textarea>
+                        <span asp-validation-for="@Model.message" class="text-danger"></span>
+                        <span class="countdown"></span>
+                    </div>
+
+                    <div class="form-group">
                         <label asp-for="@Model.sentFrom"></label>
                         <input type="text" asp-for="@Model.fromFirstName" class="form-control input-clear"  placeholder="First Name" maxlength="30">
                         <span asp-validation-for="@Model.fromFirstName" class="text-danger"></span>
@@ -29,30 +42,19 @@
                         <span asp-validation-for="@Model.fromEmail" class="text-danger"></span>
                     </div>
 
-                    <div class="form-group">
-                        <label asp-for="@Model.title" class="control-label"></label>
-                        <input type="text" asp-for="@Model.title" class="form-control input-clear" maxlength="60">
-                        <span asp-validation-for="@Model.title" class="text-danger"></span>
-				        <span class="countdown"></span>
-				    </div>
-                    <div class="form-group">     
-                        <textarea asp-for="@Model.message" class="form-control input-clear" maxlength="150"></textarea>
-                        <span asp-validation-for="@Model.message" class="text-danger"></span>
-                        <span class="countdown"></span>
-                    </div>
 
 			        <div class="form-group">
-                    <div class="checkbox">
-                        <label>
-						    <input type="checkbox" asp-for="@Model.agree" value="">I agree to the terms and conditions.
-					    </label>
-					    <span asp-validation-for="@Model.agree" class="text-danger"></span>
-                    </div>
+                        <div class="checkbox">
+                            <label>
+    						    <input type="checkbox" asp-for="@Model.agree" value="">I agree to the terms and conditions.
+    					    </label>
+    					    <span asp-validation-for="@Model.agree" class="text-danger"></span>
+                        </div>
 				    </div>
+
                     <div class="form-group">
 				        <div class="g-recaptcha" data-sitekey="6LeXTDYUAAAAALqbMEDvxpjeDhsY3X_LqfygY5Ug"></div>
 				        <span asp-validation-for="@Model.reCaptcha" class="text-danger"></span>
-                        
 				    </div>
 
 

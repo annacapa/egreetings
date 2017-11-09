@@ -4,25 +4,24 @@
                                  
                     <div class="form-group">
                         <div>
-                            @Model.toFirstName
+                            @Html.Raw(Model.toFirstName)
 			            </div>
-
                     </div>
 		
                     <div class="form-group">
-				        @Model.bridgegreetings.toEmail
+				        @Html.Raw(Model.toEmail)
                     </div>
 
                     <div class="form-group">
-                        @Model.bridgegreetings.fromFirstName
+                        @Html.Raw(@Model.fromFirstName)
                     </div>
 
-                    <div class="form-group">
-				        @Model.bridgegreetings.fromEmail
-                    </div>
 
                     <div class="form-group">
-				    <div class="has-error">@Model.Message</div>
+				        @Html.Raw(@Model.fromEmail)
+                    </div>
+
+
 			
 
 			
