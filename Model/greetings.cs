@@ -29,7 +29,7 @@ namespace halloween.Model
 
         [DisplayName("Last Name")]
         [Display(Prompt = "Last Name")]
-        [Required(ErrorMessage = "Required")]
+
         public string toLastName { get; set; }
 
         [DisplayName("Email")]
@@ -46,7 +46,7 @@ namespace halloween.Model
         public string fromFirstName { get; set; }
 
         [DisplayName("Last Name")]
-        [Required(ErrorMessage = "Required")]
+
         public string fromLastName { get; set; }
 
         [DisplayName("Email")]
@@ -65,8 +65,6 @@ namespace halloween.Model
         public string message { get; set; }
 
         [DisplayName("Terms and Conditions")]
-        [StringLength(4, MinimumLength = 1, ErrorMessage = "You must agree to this website's Terms or Use and Privacy Policy.")]
-        [Required(ErrorMessage = "Required")]
         public string agree { get; set; }
 
         public string createDate { get; set; }
