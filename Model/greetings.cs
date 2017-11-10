@@ -22,15 +22,10 @@ namespace halloween.Model
         [Required(ErrorMessage = "Required")]
         public string sendTo { get; set; }
 
-        [DisplayName("First Name")]
+        [DisplayName("To Name")]
         [Display(Prompt = "Name")]
         [Required(ErrorMessage = "Required")]
-        public string toFirstName { get; set; }
-
-        [DisplayName("Last Name")]
-        [Display(Prompt = "Last Name")]
-
-        public string toLastName { get; set; }
+        public string toName { get; set; }
 
         [DisplayName("Email")]
         [Required(ErrorMessage = "Required")]
@@ -40,14 +35,10 @@ namespace halloween.Model
         [Required(ErrorMessage = "Required")]
         public string sentFrom { get; set; }
 
-        [DisplayName("F Name")]
+        [DisplayName("From Name")]
         [Display(Prompt = "Name")]
         [Required(ErrorMessage = "Required")]
-        public string fromFirstName { get; set; }
-
-        [DisplayName("Last Name")]
-
-        public string fromLastName { get; set; }
+        public string fromName { get; set; }
 
         [DisplayName("Email")]
         [Required(ErrorMessage = "Required")]

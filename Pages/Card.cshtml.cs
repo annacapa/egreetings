@@ -39,8 +39,8 @@ namespace halloween.Pages
             {
                 bridgegreetings = _myDB.greetings.Find(id);
 
-                var toName = bridgegreetings.toFirstName + " " + bridgegreetings.toLastName;
-                var fromName = bridgegreetings.fromFirstName + " " + bridgegreetings.fromLastName;
+                var toName = bridgegreetings.toName;
+                var fromName = bridgegreetings.fromName;
 
 
 
