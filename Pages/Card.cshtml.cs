@@ -49,10 +49,10 @@ namespace halloween.Pages
                     // SEND
                     MailMessage Mailer = new MailMessage();
 
-                    Mailer.To.Add(new MailAddress(bridgegreetings.toEmail, toName));
+                    Mailer.To.Add(new MailAddress(bridgegreetings.toEmail, bridgegreetings.toName));
                     Mailer.Subject = bridgegreetings.title;
                     Mailer.Body = bridgegreetings.message;
-                    Mailer.From = new MailAddress(bridgegreetings.fromEmail, fromName);
+                    Mailer.From = new MailAddress(bridgegreetings.fromEmail, bridgegreetings.fromName);
 
                     Mailer.IsBodyHtml = true;
 

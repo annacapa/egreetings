@@ -23,7 +23,6 @@ namespace halloween.Model
         public string sendTo { get; set; }
 
         [DisplayName("To Name")]
-        [Display(Prompt = "Name")]
         [Required(ErrorMessage = "Required")]
         public string toName { get; set; }
 
@@ -35,8 +34,7 @@ namespace halloween.Model
         [Required(ErrorMessage = "Required")]
         public string sentFrom { get; set; }
 
-        [DisplayName("From Name")]
-        [Display(Prompt = "Name")]
+        [DisplayName("Sent From")]
         [Required(ErrorMessage = "Required")]
         public string fromName { get; set; }
 
