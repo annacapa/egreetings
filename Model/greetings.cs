@@ -19,7 +19,6 @@ namespace halloween.Model
         public int? ID { get; set; }
 
         [DisplayName("Send To")]
-        [Required(ErrorMessage = "Required")]
         public string sendTo { get; set; }
 
         [DisplayName("To Name")]
@@ -30,19 +29,7 @@ namespace halloween.Model
         [Required(ErrorMessage = "Required")]
         public string toEmail { get; set; }
 
-        [DisplayName("Sent From")]
-        [Required(ErrorMessage = "Required")]
-        public string sentFrom { get; set; }
-
-        [DisplayName("From Name")]
-        [Required(ErrorMessage = "Required")]
-        public string fromName { get; set; }
-
-        [DisplayName("Email")]
-        [Required(ErrorMessage = "Required")]
-        public string fromEmail { get; set; }
-       
-        [DisplayName("Title and Message")]
+        [DisplayName("Title")]
         [Display(Prompt = "Enter scary title")]
         [Required(ErrorMessage = "Required")]
         public string title { get; set; }
@@ -53,7 +40,19 @@ namespace halloween.Model
         [StringLength(150, MinimumLength = 3, ErrorMessage = "Enter between 3 and 150 characters.")]
         public string message { get; set; }
 
+        [DisplayName("Sent From")]
+        public string sentFrom { get; set; }
+
+        [DisplayName("From Name")]
+        [Required(ErrorMessage = "Required")]
+        public string fromName { get; set; }
+
+        [DisplayName("Email")]
+        [Required(ErrorMessage = "Required")]
+        public string fromEmail { get; set; }
+ 
         [DisplayName("Terms and Conditions")]
+        [Required(ErrorMessage = "Required")]
         public string agree { get; set; }
 
         public string createDate { get; set; }
