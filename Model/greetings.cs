@@ -34,7 +34,7 @@ namespace halloween.Model
         [Required(ErrorMessage = "Required")]
         public string sentFrom { get; set; }
 
-        [DisplayName("Sent From")]
+        [DisplayName("From Name")]
         [Required(ErrorMessage = "Required")]
         public string fromName { get; set; }
 
