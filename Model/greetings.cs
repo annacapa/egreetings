@@ -42,17 +42,16 @@ namespace halloween.Model
 
         [DisplayName("Sent From")]
         public string sentFrom { get; set; }
-
+        [Required(ErrorMessage = "Required")]
         [DisplayName("From Name")]
-        [Required(ErrorMessage = "Required")]
-        public string fromName { get; set; }
 
-        [DisplayName("Email")]
+        public string fromName { get; set; }
         [Required(ErrorMessage = "Required")]
+        [DisplayName("Email")]
+
         public string fromEmail { get; set; }
  
-        [DisplayName("Terms and Conditions")]
-        [Required(ErrorMessage = "Required")]
+        [DisplayName("I agree")]
         public string agree { get; set; }
 
         public string createDate { get; set; }
@@ -62,6 +61,6 @@ namespace halloween.Model
         public string sendIP { get; set; }
 
         public string reCaptcha { get; set; }
-
+        
     }
 }
