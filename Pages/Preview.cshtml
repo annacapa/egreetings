@@ -2,28 +2,7 @@
 @model PreviewModel
 
 
-            <div class="user col-xs-10 col-sm-5 col-md-6 col-lg-6">
+    @Html.Partial("_Preview", Model.bridgegreetings)
 
-	            @Html.Partial("_PreMsg", Model.bridgegreetings)
-
-            </div>
-
-            <div class="onehundred rounded really-transparent col-xs-12 col-sm-5 col-md-4 col-lg-4 col-sm-offset-2">
-
-        
-                @Html.Partial("_Preview", Model.bridgegreetings)
-
-	            <div class="has-error">@Model.Message</div>
-
-	            <form method="post">
-                    <input type="hidden" asp-for="@Model.bridgegreetings.ID" />
-
-                    <div class="btn-group">
-                    <a href="/update?id=@Model.bridgegreetings.ID" class="btn btn-basic">Edit</a>
-                    <input type="submit" value="Send" class="btn btn-basic" />
-                    </div>
-                </form>
-    
-            </div>
 
 

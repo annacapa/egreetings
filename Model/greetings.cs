@@ -48,13 +48,15 @@ namespace halloween.Model
 
         [DisplayName("From Name")]
         [Display(Prompt = "Your name")]
-        public string fromName { get; set; }
         [Required(ErrorMessage = "Required")]
+        [StringLength(70, MinimumLength = 3, ErrorMessage = "You must enter between 3 to 70 characters")]
+        public string fromName { get; set; }
 
         [DisplayName("Email")]
         [Display(Prompt = "Your email")]
-        public string fromEmail { get; set; }
         [Required(ErrorMessage = "Required")]
+        public string fromEmail { get; set; }
+
  
         [DisplayName("I agree")]
         public string agree { get; set; }

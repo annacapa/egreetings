@@ -13,7 +13,8 @@ namespace halloween.Pages
     {
         // DEFAULT MODE
         public void OnGet()
-        {          
+        {       
+            isPreviewPage = false;
         }
 
         // PREVIEW MODE (AFTER SUBMITTING)
@@ -84,7 +85,7 @@ namespace halloween.Pages
                     var values = new Dictionary<string, string>();
                     values.Add("secret", "6LeXTDYUAAAAAJ7Q3oE41YCIZfaCnVAQbwlzQ3gC");
                     values.Add("response", response);
-                    //values.Add("remoteip", this.HttpContext.Connection.RemoteIpAddress.ToString());
+                    values.Add("remoteip", this.HttpContext.Connection.RemoteIpAddress.ToString());
 
                     var query = new FormUrlEncodedContent(values);
 
