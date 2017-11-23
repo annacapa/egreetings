@@ -12,7 +12,7 @@ namespace halloween.Pages
     public class PreviewModel : PageModel
     {
 
-        // BRIDGE TO GREETTINGS MODEL
+        // BRIDGE TO GREETINGS MODEL
         [BindProperty]
         public greetings bridgegreetings { get; set; }
 
@@ -53,12 +53,16 @@ namespace halloween.Pages
 
                     Mailer.IsBodyHtml = true;
 
-                    using (SmtpClient smtpServer = new SmtpClient()) {
-                        smtpServer.EnableSsl = true;
-                        smtpServer.Host = "smtp.wowoco.org"; //CHANGE
-                        smtpServer.Port = 25; //CHANGE
-                        smtpServer.UseDefaultCredentials = false;
-                        smtpServer.Send(Mailer);
+                    using (SmtpClient client = new SmtpClient()) {
+
+                        client.EnableSsl = true;
+                        client.UseDefaultCredentials = true;
+                        client.Credentials = new System.Net.NetworkCredential("[gmail email]", "[gmail password]");
+                        client.Host = "";
+                        client.Port = 123;
+                        client.Send(Mailer);
+
+
                     }
 
                     // DB-RELATED: CUSTOMIZE VALUES TO BE ADDED TO THE DB

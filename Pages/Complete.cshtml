@@ -1,9 +1,16 @@
 ﻿@page
 @model CompleteModel
-@{
 
-    ViewData["Title"] = "Complete";
-}
 
-<h2>Congratulations!</h2>
-<p>Your message was successfully sent!</p>
+    <div class="user col-xs-10 col-sm-5 col-md-6 col-lg-6">
+
+        <h1>Congratulations!</h1>
+        <h4>Your message was successfully sent!</h4>
+
+    </div>
+
+    <div class="onehundred rounded really-transparent col-xs-12 col-sm-5 col-md-4 col-lg-4 col-sm-offset-2">
+
+        @Html.Partial("_Preview", Model.bridgegreetings)
+
+    </div>

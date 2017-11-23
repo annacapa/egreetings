@@ -1,18 +1,6 @@
 ﻿@model halloween.Model.greetings
 
-<div class="user col-xs-10 col-sm-5 col-md-6 col-lg-6">
 
-    <h1 class="preview-font">
-        @Html.Raw(@Model.title)
-    </h1>
-
-    <h4 class="preview-font">
-        @Html.Raw(@Model.Message)
-    </h4>
-
-</div>
-
-<div class="onehundred rounded really-transparent col-xs-12 col-sm-5 col-md-4 col-lg-4 col-sm-offset-2">
 
     <div class="form-group">
     <label asp-for="@Model.sendTo"></label>
@@ -34,18 +22,7 @@
         @Html.Raw(@Model.fromEmail)
     </div>
 
-    <div class="form-group">
-        <form method="post">
-            <input type="hidden" asp-for="@Model.ID" />
 
-            <div class="btn-group">
-                <a href="/update?id=@Model.ID" class="btn btn-basic">Edit</a>
-                <input type="submit" value="Send" class="btn btn-basic" />
-            </div>
-        </form>
-	</div>
-	
-</div>
 
 
 
