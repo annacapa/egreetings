@@ -10,6 +10,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="db\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Model\Index.cshtml" />
@@ -20,9 +21,13 @@
     <Compile Remove="Model\index.cs" />
     <Compile Remove="Pages\_PreMsg.cshtml.cs" />
     <Compile Remove="Pages\_Preview.cshtml.cs" />
+    <Compile Remove="Pages\About.cshtml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Pages\Preview.cshtml" />
+    <Content Remove="Pages\About.cshtml" />
+    <Content Remove="Pages\_CardAddress.cshtml" />
+    <Content Remove="Pages\_CardMsg.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Pages\Complete.cshtml.cs">
@@ -34,5 +39,8 @@
     <Compile Update="Pages\Card.cshtml.cs">
       <DependentUpon>Card.cshtml</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="egreetings.db" CopyToOutputDirectory="Always" />
   </ItemGroup>
 </Project>

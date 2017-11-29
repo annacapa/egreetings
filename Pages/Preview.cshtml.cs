@@ -48,18 +48,20 @@ namespace halloween.Pages
 
                     Mailer.To.Add(new MailAddress(bridgegreetings.toEmail, bridgegreetings.toName));
                     Mailer.Subject = bridgegreetings.title;
-                    Mailer.Body = bridgegreetings.message;
+                    // Mailer.Body = bridgegreetings.message;
                     Mailer.From = new MailAddress(bridgegreetings.fromEmail, bridgegreetings.fromName);
 
                     Mailer.IsBodyHtml = true;
+
+                    Mailer.Body = bridgegreetings.fromName + "has a greeting for you" + "Visit http://anacapa.wowoco.org/read/" + bridgegreetings.ID;
 
                     using (SmtpClient client = new SmtpClient()) {
 
                         client.EnableSsl = true;
                         client.UseDefaultCredentials = true;
                         client.Credentials = new System.Net.NetworkCredential("[gmail email]", "[gmail password]");
-                        client.Host = "";
-                        client.Port = 123;
+                        client.Host = "smtphosthere.com";
+                        client.Port = 25;
                         client.Send(Mailer);
 
 
@@ -77,7 +79,7 @@ namespace halloween.Pages
                     return RedirectToPage("Complete");
 
                 } catch {
-                    Message = "Sorry, but you're lost!";
+                    Message = "error msg";
                 }
             }
 

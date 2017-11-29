@@ -59,7 +59,7 @@ namespace halloween.Pages
                     using (SmtpClient smtpServer = new SmtpClient())
                     {
                         smtpServer.EnableSsl = true;
-                        smtpServer.Host = "smtp.wowoco.org"; //CHANGE
+                        smtpServer.Host = ""; //CHANGE
                         smtpServer.Port = 25; //CHANGE
                         smtpServer.UseDefaultCredentials = false;
                         smtpServer.Send(Mailer);
