@@ -1,8 +1,6 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Mail;
 using System.Threading.Tasks;
 using halloween.Model;
 using Microsoft.AspNetCore.Mvc;
@@ -12,17 +10,9 @@ namespace halloween.Pages
 {
     public class CompleteModel : PageModel
     {
+        private greetings bridgegreetings;
 
-        // BRIDGE TO GREETINGS MODEL
-        [BindProperty]
-        public greetings bridgegreetings { get; set; }
-
-        // DB-RELATED: CONNECT MY DATABASE TOT THIS MODEL
-        private DbBuilder _myDB;
-        public CompleteModel(DbBuilder myDB)
-        {
-            _myDB = myDB;
-        }
+        public DbBuilder _myDB { get; private set; }
 
         public void OnGet(int ID = 0)
         {
@@ -30,8 +20,8 @@ namespace halloween.Pages
             {
                 bridgegreetings = _myDB.greetings.Find(ID);
             }
+
         }
 
     }
 }
-

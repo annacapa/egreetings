@@ -37,6 +37,8 @@ namespace halloween.Pages
             if (id > 0) {
                 bridgegreetings = _myDB.greetings.Find(id);
 
+
+
                 var toName = bridgegreetings.toName;
                 var fromName = bridgegreetings.fromName;
 
@@ -57,11 +59,11 @@ namespace halloween.Pages
 
                     using (SmtpClient client = new SmtpClient()) {
 
-                        client.EnableSsl = true;
-                        client.UseDefaultCredentials = true;
-                        client.Credentials = new System.Net.NetworkCredential("[gmail email]", "[gmail password]");
-                        client.Host = "smtphosthere.com";
-                        client.Port = 25;
+                        client.EnableSsl = false;
+                        client.UseDefaultCredentials = false;
+                        // client.Credentials = new System.Net.NetworkCredential("[gmail email]", "[gmail password]");
+                        client.Host = "";
+                        client.Port = 2525;
                         client.Send(Mailer);
 
 

@@ -1,0 +1,39 @@
+﻿@page
+@model EmailModel
+
+
+@{
+    Layout = null;
+}
+
+<center>
+    <div> 
+        HAVING TROUBLE READING THIS EMAIL? CLICK HERE
+    </div>
+
+    <a href="http://anacapa.wowoco.org/read?id=@Model.bridgegreetings.ID">
+    <div>
+    
+        <img src="http://anacapa.wowoco.org/images/halloween.jpg" alt="Happy Thanksgiving! Please set your email to display this image. Thanksgiving Card." title="Click here to read your egreetings.">
+    </div>
+    </a>
+    
+    <div style="text-align: left; max-width: 400px;">
+        @Model.bridgegreetings.message
+    
+        <br><br>
+        From,
+        <br>
+        @Model.bridgegreetings.fromName (@Model.bridgegreetings.fromEmail)
+    </div>
+
+        <div style="margin-top: 50px; font-size: 8px;">
+        @Model.bridgegreetings.message
+    
+        <br><br>
+        This email was sent to @Model.bridgegreetings.toEmail from @Model.bridgegreetings.fromEmail on @DateTime.Now
+    </div>
+    
+
+
+</center>
