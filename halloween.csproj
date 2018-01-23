@@ -15,6 +15,8 @@
   <ItemGroup>
     <None Remove="Model\Index.cshtml" />
     <None Remove="Pages\Preview.html" />
+    <None Remove="egreetings.db" />
+    <None Remove="Pages\Preview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Model\EmptyClass.cs" />
@@ -22,6 +24,7 @@
     <Compile Remove="Pages\_PreMsg.cshtml.cs" />
     <Compile Remove="Pages\_Preview.cshtml.cs" />
     <Compile Remove="Pages\About.cshtml.cs" />
+    <Compile Remove="Pages\Preview.cshtml.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Pages\Preview.cshtml" />
@@ -39,8 +42,11 @@
     <Compile Update="Pages\Card.cshtml.cs">
       <DependentUpon>Card.cshtml</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="egreetings.db" CopyToOutputDirectory="Always" />
+    <Compile Update="Pages\Preview1.cshtml.cs">
+      <DependentUpon>Preview.cshtml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\PreviewNew.cshtml.cs">
+      <DependentUpon>Preview.cshtml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

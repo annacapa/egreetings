@@ -33,8 +33,10 @@ namespace halloween.Pages
 
         // EMAIL-RELATED
         public string Message { get; set; }
-        public IActionResult OnPost(int id = 0) {
-            if (id > 0) {
+        public IActionResult OnPost(int id = 0)
+        {
+            if (id > 0)
+            {
                 bridgegreetings = _myDB.greetings.Find(id);
 
 
@@ -44,7 +46,8 @@ namespace halloween.Pages
 
 
 
-                try {
+                try
+                {
                     // SEND
                     MailMessage Mailer = new MailMessage();
 
@@ -57,7 +60,8 @@ namespace halloween.Pages
 
                     Mailer.Body = bridgegreetings.fromName + "has a greeting for you" + "Visit http://anacapa.wowoco.org/read/" + bridgegreetings.ID;
 
-                    using (SmtpClient client = new SmtpClient()) {
+                    using (SmtpClient client = new SmtpClient())
+                    {
 
                         client.EnableSsl = false;
                         client.UseDefaultCredentials = false;
@@ -80,7 +84,9 @@ namespace halloween.Pages
 
                     return RedirectToPage("Complete");
 
-                } catch {
+                }
+                catch
+                {
                     Message = "error msg";
                 }
             }
